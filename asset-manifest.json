@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todo-list-react-mobx/static/css/main.620cc75f.css",
+    "main.js": "/todo-list-react-mobx/static/js/main.2feaf39c.js",
+    "index.html": "/todo-list-react-mobx/index.html",
+    "main.620cc75f.css.map": "/todo-list-react-mobx/static/css/main.620cc75f.css.map",
+    "main.2feaf39c.js.map": "/todo-list-react-mobx/static/js/main.2feaf39c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.620cc75f.css",
+    "static/js/main.2feaf39c.js"
+  ]
+}
