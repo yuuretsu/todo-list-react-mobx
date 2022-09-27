@@ -1,0 +1,33 @@
+@import "reset.css";
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: var(--col-primary);
+  background-color: var(--col-bg);
+}
+
+label,
+button,
+input[type=checkbox] {
+  cursor: pointer;
+
+  & * {
+    cursor: inherit;
+  }
+}
+
+.visuallyHidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}

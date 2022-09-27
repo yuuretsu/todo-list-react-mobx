@@ -1,0 +1,14 @@
+$transition-duration: 0.2s;
+$border-size: 2px;
+
+:root {
+  --col-primary: #333;
+  --col-bg: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --col-primary: white;
+    --col-bg: black;
+  }
+}

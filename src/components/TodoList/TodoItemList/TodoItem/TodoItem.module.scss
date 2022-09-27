@@ -1,0 +1,111 @@
+@import "variables";
+
+$control-size: 25px;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
+}
+
+.title {
+  margin-right: auto;
+  padding-right: 20px;
+  padding-left: 10px;
+  line-height: 21px;
+  overflow: hidden;
+
+  &.completed {
+    opacity: 0.5;
+  }
+}
+
+.checkbox {
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  width: $control-size;
+  height: $control-size;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    box-sizing: border-box;
+    width: $control-size;
+    height: $control-size;
+    border: $border-size solid var(--col-primary);
+    border-radius: 100%;
+    transition-duration: $transition-duration;
+  }
+
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10px;
+    height: 5px;
+    transform: translate(-50%, calc(-50% - 5px)) rotateZ(-45deg);
+    border-bottom: $border-size solid var(--col-bg);
+    border-left: $border-size solid var(--col-bg);
+    opacity: 0;
+    transition: background-color $transition-duration, transform $transition-duration;
+  }
+
+  &:checked {
+    &::before {
+      background-color: var(--col-primary);
+    }
+
+    &::after {
+      transform: translate(-50%, calc(-50% - 1px)) rotateZ(-45deg);
+      opacity: 1;
+    }
+  }
+}
+
+.delete {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  box-sizing: border-box;
+  color: var(--col-primary);
+  background-color: var(--col-bg);
+  border: $border-size solid var(--col-primary);
+  font-size: 8px;
+  padding: 0;
+  width: $control-size;
+  height: $control-size;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    width: $border-size;
+    height: 15px;
+    background-color: var(--col-primary);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}

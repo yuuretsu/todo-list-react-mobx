@@ -1,0 +1,38 @@
+@import "variables";
+
+.radioSelect {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.option {
+  display: flex;
+  width: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  color: var(--col-primary);
+  background-color: var(--col-bg);
+  border: $border-size solid var(--col-primary);
+
+  &:not(:last-child) {
+    border-right: none;
+  }
+
+  &.selected {
+    color: var(--col-bg);
+    background-color: var(--col-primary);
+  }
+}
+
+.title {
+  color: inherit;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
